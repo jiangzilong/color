@@ -1,0 +1,32 @@
+html,body{
+    margin:0;
+    text-align: center;
+    background-color: rgba(167,67,67,1);
+}
+
+.content{
+    height: 60%;
+    margin-top: 25%;
+}
+.content img{
+    height: 60%;
+}
+.content button {
+    border: none;
+    padding: 0.6em 1.2em;
+    background: #ff6600;
+    color: #fff;
+    font-family: Arial;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px 2px;
+    border-radius: 2px;
+}
+.content p{
+    color:#222;
+    font-size:12px;
+}
+

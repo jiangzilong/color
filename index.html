@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/easeljs-0.8.2.min.js"></script>
+    <script src="js/Rect.js"></script>
+</head>
+<body>
+<div class="window" id="end">
+    <img id="image">
+    <h3>得分：<span id="end_score">0</span></h3>
+    <h4 id="end_descrip">乖，别乱点！</h4>
+    <button onclick="window.location.reload()">再玩一次</button>
+</div>
+
+<div class="window" id="pause">
+    <img src="img/wait.gif">
+    <h3>看在你丑的份上就让你休息一下吧！</h3>
+    <button onclick="pause()">继续游戏</button>
+    <button onclick="window.location.href='select.html'">选择模式</button>
+</div>
+
+<lable class="info_area score_area">得分: <span id="score"></span></lable>
+<lable class="info_area time_area">时间: <span id="time"></span></lable>
+<lable id="btn_pause" class="info_area pause_area md-trigger" onclick="pause()" data-modal="modal-1">暂停</lable>
+<canvas id="gameView" width="320px" height="320px"></canvas>
+<!--<button onclick="shareFriend()">分享</button>-->
+<!--<div id="cover" style="height: 90%; width: 100%; position:absolute; top:10%; z-index: 0;"></div>-->
+<div class="md-overlay"></div>
+
+<script src="js/app.js"></script>
+
+
+<!--<script>-->
+    <!--var imgUrl = "img/纯洁的微笑/png";-->
+    <!--var lineLink = window.location.href;-->
+    <!--var descContent = '小游戏';-->
+    <!--var shareTitle = '看你有多色';-->
+    <!--var appid = 'wxea73b871954d04ae';-->
+
+    <!--function shareFriend() {-->
+        <!--WeixinJSBridge.invoke('sendAppMessage',{-->
+            <!--"appid": appid,-->
+            <!--"img_url": imgUrl,-->
+            <!--"img_width": "200",-->
+            <!--"img_height": "200",-->
+            <!--"link": lineLink,-->
+            <!--"desc": descContent,-->
+            <!--"title": shareTitle-->
+        <!--}, function(res) {-->
+            <!--alert(res.err_msg);-->
+            <!--//_report('send_msg', res.err_msg);-->
+        <!--})-->
+    <!--}-->
+    <!--function shareTimeline() {-->
+        <!--WeixinJSBridge.invoke('shareTimeline',{-->
+            <!--"img_url": imgUrl,-->
+            <!--"img_width": "200",-->
+            <!--"img_height": "200",-->
+            <!--"link": lineLink,-->
+            <!--"desc": descContent,-->
+            <!--"title": shareTitle-->
+        <!--}, function(res) {-->
+            <!--//_report('timeline', res.err_msg);-->
+        <!--});-->
+    <!--}-->
+    <!--function shareWeibo() {-->
+        <!--WeixinJSBridge.invoke('shareWeibo',{-->
+            <!--"content": descContent,-->
+            <!--"url": lineLink-->
+        <!--}, function(res) {-->
+            <!--//_report('weibo', res.err_msg);-->
+        <!--});-->
+    <!--}-->
+    <!--// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。-->
+    <!--document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {-->
+        <!--// 发送给好友-->
+        <!--WeixinJSBridge.on('menu:share:appmessage', function(argv){-->
+            <!--shareFriend();-->
+        <!--});-->
+        <!--// 分享到朋友圈-->
+        <!--WeixinJSBridge.on('menu:share:timeline', function(argv){-->
+            <!--shareTimeline();-->
+        <!--});-->
+        <!--// 分享到微博-->
+        <!--WeixinJSBridge.on('menu:share:weibo', function(argv){-->
+            <!--shareWeibo();-->
+        <!--});-->
+    <!--}, false);-->
+<!--</script>-->
+</body>
+</html>
